@@ -1,0 +1,76 @@
+
+variables:
+    - categorical : data that can be categorised
+    - numerical (quantitive) : numerical data
+
+categorical:
+    - nominal : which describes something
+    - ordinal : have an inherent ranking
+    - binary : 2 possible values
+
+numerical (quantitive):
+    - continuous
+    - discrete
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+spread of dataset:
+    - for highly skewed data or data with extreme outliers, we therefore might prefer to use IQR or MAD
+    - for data that is more normally distributed, the variance and standard deviation are frequently reported
+
+quantitive and categorical variable summary statistics:
+    - we can use a mean or median difference
+
+quantitive and quantitive variable summary statistics:
+    - we can use the Pearson correlation
+
+categorical and categorical variable summary statistics:
+    - we can use a contingency table and the Chi-Square statistic
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+measures for central tendency (quantitive data) :
+    - mean: sum of all the values / no. of values
+    - median: middle value when sorted
+    - mode: value with most frequency
+    - trimmed mean: the mean excluding x % of lowest and highest value
+
+measures for spread (quantitive data) :
+    - range: difference between the maximum and minimum values
+    - inter-quartile range (IQR): difference between the 75th and 25th percentile values
+    - variance: average of the squared distance from each data point to the mean
+    - standard deviation: square root of variance
+    - mean absolute deviation: mean absolute value of the distance between each data point and the mean
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+five types of data analysis:
+    - descriptive
+    - exploratory
+    - inferential
+    - causal
+    - predictive
+
+descriptive analysis:
+    - it let us draw basic conclusions about the data at hand
+    - we cannot extend findings from descriptive analysis to other datasets
+
+exploratory analysis:
+    - it show us underlying patterns and relationships within datasets
+    - it cannot determine causation
+
+inferential analysis:
+    - it lets us test a hypothesis on a sample of a population and then extend our conclusions to the whole population
+
+causal analysis:
+    - correlation does not equal causation
+    - proving causation is tricky and generally requires very careful experimental design
+    - replication, randomization, and control are key components of good experimental design
+
+predictive analysis:
+    - supervised machine learning algorithms are trained with labeled data and predict the likelihood of future outcome
+    - they can only be as good as the data used to train them
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+a
