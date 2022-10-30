@@ -73,4 +73,14 @@ predictive analysis:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-a
+covariance:
+    - it is a summary statistic that describes the strength of a linear relationship
+    - it can range from negative infinity to positive infinity
+    - a positive covariance indicates that a larger value of one variable is associated with a larger value of the other
+
+correlation:
+    - it is a scaled form of covariance
+    - it ranges from -1 to +1, making it more interpretable
+    - highly associated variables with a positive linear relationship will have a correlation close to +1
+    - generally, a correlation larger than about 0.3 indicates a linear association
+    - and correlation greater than about 0.6 suggestions a strong linear association
