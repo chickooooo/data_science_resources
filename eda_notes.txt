@@ -84,3 +84,16 @@ correlation:
     - highly associated variables with a positive linear relationship will have a correlation close to +1
     - generally, a correlation larger than about 0.3 indicates a linear association
     - and correlation greater than about 0.6 suggestions a strong linear association
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+contingency tables:
+    - contingency tables, also known as two-way tables or cross-tabulations, are useful for summarizing two variables at the same time
+
+marginal proportions:
+    - the proportion of respondents in each category of a single question is called a marginal proportion
+
+chi-square statistic:
+    - to calculate the Chi Square statistic, we simply find the squared difference between each value in the observed table and
+      its’ corresponding value in the expected table; then add up those numbers
+    - for a 2x2 table, a Chi-Square statistic larger than around 4 would strongly suggest an association between the variables
