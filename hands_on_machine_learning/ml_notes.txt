@@ -71,7 +71,7 @@ Instance-based Learning:
 
 Model-based Learning:
     - learning by generalisation
-    - the performance is specified by performance matrix
+    - the performance is specified by performance measure (cost function, utility fucntion, fitness function)
 
 inference: making predictions on new cases
 
@@ -104,3 +104,20 @@ validation set (development set or dev set): this hold out set is called validat
 total dataset = training set + validation set + test set
 
 cross-validation: evaluating model on many small validation sets
+
+signal: a piece of information fed to a ML system
+
+data pipeline: a sequence of data processing components
+
+univariate regression: predicting a single quantitative value
+multivariate regression: predicting multiple quantitative value
+
+Performance measure for regression problems:
+    - root mean square error (RMSE): preferred when less outliers
+    - mean absolute error (MAE): preferred when more outliers
+
+euclidean distance (l2 norm): ((x2 - x1)^2 + (y2 - y1)^2)^1/2
+
+manhattan distance (l1 norm): |x2 - x1| + |y2 - y1|
+
+--> Tip: the higher the norm, the more sensitive it is to outliers
