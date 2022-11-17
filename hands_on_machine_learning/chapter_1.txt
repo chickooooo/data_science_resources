@@ -1,0 +1,106 @@
+Scikit-Learn: helps implement ML algorithms effeciently
+TensorFlow: helps run very large neural networks using distributed computation
+Keras: high level deel learning API. Often used with TensorFlow
+
+data mining: applying ML techniques to dig into large amounts of data can help discover patterns that were not immediately apparent
+
+Types of ML Systems:
+    - supervised, unsupervised, semi-supervised, reinforcement learning
+    - online vs batch learning
+    - instance based vs model based learning
+
+Supervised Learning:
+    - independent variables -> predictors
+    - dependent variables -> labels
+    - supervised learning algorithms:
+        - k-nearest neighbors
+        - linear regression
+        - logistic regression
+        - support vector machine (SVM)
+        - decision tree & reandom forest
+        - neural networks
+
+Unsupervised Learning:
+    - no labels
+    - anomaly detection: very clean training data
+    - unsupervised learning algorithms:
+        - clustering:
+            - k-means
+            - DBSCAN
+            - Hierarchical Cluster Analysis (HCA)
+        - anomaly detection and novelty detection:
+            - one-class SVM
+            - isolation forest
+        - visualisation and dimensionality reduction
+            - principal component analysis (PCA)
+            - kernel PCA
+            - locally linear embedding (LLE)
+            - t-distributed stochastic neighbor embedding (t-SNE)
+        - association rule learning:
+            - apriori
+            - eclat
+
+feature extraction: merging several correlating features into one
+
+---> Tip: try to reduce dimensions of your training data (using dimensionality reduction algorithms) before feeding it to the model
+
+Semisupervised Learning:
+    - deep belief networks (DBNs)
+
+Reinforcement Learning:
+    - the system is called an agent
+    - the strategies that system implements is called policy
+
+Batch Learning:
+    - incapable of learning incrementally
+    - neeeds to create model from scrach when training on new data
+
+offline learning: the system is first trained and then launched to production
+
+Online Learning:
+    - can learn incrementally
+    - learning rate: how fast to adapt to changing data
+
+out-of-core learning: training on huge datasets that cannot fit in one machines memory.
+                      it is usually done offline
+
+Instance-based Learning:
+    - learning by heart
+    - e.g flagging same or very similar spam emails
+    - the performance depends on the measure of similarity
+
+Model-based Learning:
+    - learning by generalisation
+    - the performance is specified by performance matrix
+
+inference: making predictions on new cases
+
+training a model: finding the values of model parameters that will make the model best fit the training data
+
+Challenges of ML:
+    - bad data:
+        - insufficient quantity of data
+        - poor quality of data (errors, outliers, noise)
+        - irrelevant features
+    - bad algorithms:
+        - overfitting the training data
+        - underfitting the training data
+
+sampling bias: occurs when your sample does not fully represents the population
+
+feature engineering: coming up with good set of features to train the model on
+feature selection: selecting the most useful features
+feature extraction: combining existing features to create a more useful one
+
+regularization: constraining a model to make it simpler and reduce the risk of overfitting
+
+hyperparameter: it is a parameter of a learning algorithm (not of the model)
+
+generalization error (out-of-sample error): the error rate on new cases
+
+holdout validation: holding out part of training set to evaluate several candidate models
+validation set (development set or dev set): this hold out set is called validation set
+
+total dataset = training set + validation set + test set
+
+cross-validation: evaluating model on many small validation sets
