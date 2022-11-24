@@ -121,3 +121,21 @@ euclidean distance (l2 norm): ((x2 - x1)^2 + (y2 - y1)^2)^1/2
 manhattan distance (l1 norm): |x2 - x1| + |y2 - y1|
 
 --> Tip: the higher the norm, the more sensitive it is to outliers
+
+--> Tip: for a bell shaped normal distribution (Gaussian distribution), standard deviation follows 68-95-99.7 rule
+
+data snooping: it is a form of statistical bias manipulating data to artificially get statistically significant results
+
+stratified sampling: the population is divided into homogeneous subgroups called strata and the right number of instances
+                     are sampled from each stratum to gaurantee that the test set is representative of the overall population
+
+one-hot encoding: only one category will be hot (1) while others will be cold (0) at a given time
+
+Feature scaling:
+    - helps algorithm perform better with consistent magnitudes
+    - normalization
+        - scales down to range 0-1
+        - value = (x - xmin) / (xmax - xmin)
+    - standardization
+        - scales down based on standard normal distribution
+        - value = (x - mean) / standard deviation
