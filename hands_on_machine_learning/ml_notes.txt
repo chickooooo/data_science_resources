@@ -1,6 +1,6 @@
 Scikit-Learn: helps implement ML algorithms effeciently
 TensorFlow: helps run very large neural networks using distributed computation
-Keras: high level deel learning API. Often used with TensorFlow
+Keras: high level deep learning API. Often used with TensorFlow
 
 data mining: applying ML techniques to dig into large amounts of data can help discover patterns that were not immediately apparent
 
@@ -139,3 +139,13 @@ Feature scaling:
     - standardization
         - scales down based on standard normal distribution
         - value = (x - mean) / standard deviation
+
+cross-validation: randomly splitting the training set into n subsets called folds and then training and evaluating
+                  the model n times using n-1 training sets and 1 validation set
+
+ensemble learning: building a model on top of many other models
+
+avoid overfitting:
+    - simplify the model
+    - constrain or regularize the model
+    - get more training data
