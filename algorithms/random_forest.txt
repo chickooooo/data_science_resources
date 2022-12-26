@@ -1,0 +1,2 @@
+
+- predictions made by random forest can be calculationally proven but are hard to interpret -> black box model

@@ -1,0 +1,45 @@
+- decision trees are also called growing trees
+
+- decision tree can perform classification + regression
+- capable of multi-output tasks
+
+- does not require feature scaling
+- can work with categorical data without one hot encoding
+
+- CART ( classification and regression tree ) algorithm produces only binary trees
+- ID3 ( Iterative Dichotomiser 3 ) algorithm can produce trees with nodes having more than 2 children
+
+- decisions made by decision tree are easy to interpret -> white box model
+
+- can also estimate prediction probability ( or confidence rate )
+
+- which feature should the decision tree split on is decided by information gain
+- it tries to split into as many pure features as possible
+- it stops splitting once reached max depth or all pure leaf nodes or cannot reduce G.I.
+
+- prediction time complexity O( log2(m) ),    m -> no. of features
+- predictions are very fast
+
+- training time complexity is O( n.m.log2(m) ),    n-> no. of instances
+
+- gini impurity is slightly faster than entropy ( hence default )
+- gini impurity tends to isolate most frequent class in it's own branch
+- entropy tends to create more balanced tree
+
+- decision tree is a non-parametric model -> no predefined parameters
+- this property tends to overfitting
+
+- in classification problems, splitting is done to minimize G.I.
+- in regression problems, splitting is done to minimize MSE
+
+- in classification problems, root value is mode of all the values
+- in regression problems, root value is mean of all the values
+
+- advantages: easy to interpret and visualise, easy to use
+- advantages: powerful, better fitting ( or even overfitting )
+- advantages: fast predictions
+- advantages: very less data preprocessing
+
+- limitaions: create orthogonal decision boundaries
+- limitaions: sensitive to small variations in training data
+- limitaions: stochastic training, resulting in different models on same dataset

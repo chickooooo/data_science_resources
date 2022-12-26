@@ -1,0 +1,2 @@
+- linear regression is a parametric model -> has predefined parameters
+- this property tends to underfitting
