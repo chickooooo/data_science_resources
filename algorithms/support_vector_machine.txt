@@ -1,0 +1,61 @@
+- can perform linear, non-linear classification
+- can perform linear, non-linear regression
+- outlier detection
+
+- preferred for classification of small or medium sized datasets
+
+- large margin classification:
+    the margin line stays as far away as possible from the
+    closest datapoint
+
+- the area between support planes is called the street
+- support vectors (instances) are used to create support planes
+
+- SVMs are sensitive to feature scalling
+- feature scalling is preferred
+
+- hard margin classification:
+    -- all instances must be off the street
+    -- all instances must be on the right side
+    -- works only if data is linearly seperable
+    -- sensitive to outliers
+
+- objective is to keep the street as wide as possible and limiting
+  marginal violation
+
+- soft margin classification:
+    -- instances can be on street or wrong side
+    -- robust to outliers
+
+- in scikit learn, lesser the value of C -> softer the margin
+
+- SVM do not output probabilities for each class
+
+- dual parameter should be set to false, unless there are more
+  features than training instances
+
+- LinearSVC is much faster than SVC with kernel = 'linear'
+- kernel = 'poly' creates polynomial hyperplane
+
+- gaussian RBF kernel:
+    -- if underfitting, increase gamma or increase C
+    -- if overfitting, decrease gamma or decrease C
+
+- always start with linear kernel
+- then move towards rbf
+
+- Computational complexity:
+    -- LinearSVC O(mn)
+    -- SVC scales well with number of features
+
+- SVM regression:
+    -- tries to fit as many instances as possible on the street
+       while limiting marginal violation
+    -- the width of the street is controlled by epsilon
+    -- more the epsilon -> wider the street -> better generalisation
+
+- SVC and SVR becomes much slower as training data increases
+- LinearSVC and LinearSVR are robust to the size of training data
+
+- SVMs can also be used for outlier detection
+
