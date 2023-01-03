@@ -1,0 +1,14 @@
+bias:
+    - the inability of machine learning algorithm to capture
+      the true relationship in the data
+    - high bias -> the algorithm cannot represent the data accurately
+    - low bias -> the algorithm is able to represent data accurately
+    - zero bias -> the algorithm represent the data perfectly
+
+variance:
+    - also called variability
+    - the difference in fit between datasets
+    - high variance -> the algorithm fits one dataset very well and other dataset very bad
+    - low variance -> the algorithm fits both the dataset equally
+                        -- equally good  OR
+                        -- equally bad
