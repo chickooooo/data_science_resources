@@ -1,0 +1,33 @@
+
+- a group of predictors is called an ensemble
+- an ensemble of decision trees is called a random forest
+
+- hard voting: picking the prediction with the highest number of votes
+- soft voting: combining the probabilities of each prediction from each
+               model and picking the prediction with highest average probability
+- soft voting often achieves higher performance because it gives more weight to
+  highly confident votes
+
+- weak learner: model not able to generalise well and giving low accuracy
+- strong learner: model giving high accuracy
+
+- law of large numbers: as a sample size grows, it's mean gets closer to the average of whole population
+
+- ensemble works best when the predictors are as independent from one another as possible
+- one way to get diverse calssifiers is to train them using very different algorithms
+
+- bagging:
+      -- bootstrap aggregation
+      -- same algorithm is used for every predictor
+      -- a random sample of data is selected from training set set with replacement
+      -- individual datapoints can be selected more than once
+      -- the aggregating function for classification is statistical mode
+      -- and for regression is statistical mean
+
+- pasting: same as bagging but without replacement
+- pasting should be preferred when you have large dataset as each predictor
+  will be trained on independent data
+
+- BaggingClassifier automatically performs soft voting if the predictor can predict probabilities
+
+- predictions made by random forest can be calculationally proven but are hard to interpret -> black box model
