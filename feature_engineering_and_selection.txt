@@ -1,0 +1,85 @@
+correlation between numerical features and target
+
+
+combining numerical features:
+    A + B
+    A - B
+    A * B
+    A / B
+    Log(A) + log(B)
+    w1*A + w2*B
+
+
+imputing missing values:
+    - mean, median, mode
+    - using other features in the dataset
+    - base values like 0
+
+
+encoding categorical features:
+    - label encoding
+        -- ['a', 'a', 'b', 'c'] -> [0, 0, 1, 2]
+        -- used for target variable
+        -- nominal encoding
+    - ordinal encoding
+        -- ['a', 'a', 'b', 'c'] -> [0, 0, 1, 2]
+        -- used for features where order matters
+        -- ordinal encoding
+    - one hot encoding
+        -- nominal encoding
+    - mean target encoding
+        -- calculate average using target
+        -- nominal encoding
+        -- works best for high cardinal variables
+        -- must be processed using cross validation
+
+
+aggregation to create new features:
+    - using .groupby()
+
+
+scaling:
+    - not necessary for decision tree based models
+    - necessary for linear models and neural nets
+        -- StandardScaler
+        -- MinMaxScaler
+        -- MaxAbsScaler
+        -- RobustScaler
+        -- PowerTransformer
+
+
+target engineering transformation:
+    - e.g taking log of target while training and using e^y
+      of output while making predictions
+    - methods:
+        -- log y
+        -- 10 / y
+        -- log(1+y)
+        -- y ^ (1/2)
+
+
+dimentionality reduction:
+    - PCA
+    - LDA
+    - SVD
+    - t-SNE
+    - KNN
+    - autoencoder
+
+
+clustering:
+    - K-means
+    - DBSCAN
+    - Birch
+
+
+GBDT tree leaves
+
+
+feature selection:
+    - forward selection
+    - backward elimination
+    - recursive feature elimination
+    - using feature importance from LGBM algorithm
+        -- add random noice and remove all features having
+           feature importance below that noice
