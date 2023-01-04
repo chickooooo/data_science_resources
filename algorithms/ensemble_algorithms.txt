@@ -14,12 +14,14 @@
 - law of large numbers: as a sample size grows, it's mean gets closer to the average of whole population
 
 - ensemble works best when the predictors are as independent from one another as possible
-- one way to get diverse calssifiers is to train them using very different algorithms
+- one way to get diverse classifiers is to train them using very different algorithms
+
+
 
 - bagging:
       -- bootstrap aggregation
       -- same algorithm is used for every predictor
-      -- a random sample of data is selected from training set set with replacement
+      -- a random sample of data is selected from training set with replacement
       -- individual datapoints can be selected more than once
       -- the aggregating function for classification is statistical mode
       -- and for regression is statistical mean
@@ -30,4 +32,35 @@
 
 - BaggingClassifier automatically performs soft voting if the predictor can predict probabilities
 
+- out of bag evaluation (oob): evaluating each predictor of a bagging ensemble with
+                               the leftover data that was not used for training
+
+- random patches: sampling both training instances and features
+- random subspaces: sampling only features
+- bagging: sampling only instances
+
+
+
+- random forest:
+      -- bagging classifier with estimator = DecisionTree and max_samples = 1.0
+      -- searches for the best feature to split from a random subset of features
+      -- has better tree diversity than BaggingClassifier
+
 - predictions made by random forest can be calculationally proven but are hard to interpret -> black box model
+
+- extra trees:
+      -- EXTremely RAndomized trees
+      -- random forest does optimum split at each feature and then selects the feature with max information gain
+      -- extra trees does random split at each feature and ...
+      -- adds even more diversity to the ensemble
+
+- 'feature_importances_' attribute of a tree like algorithm can tell us the importance
+  of each feature in decision making
+
+
+
+- boosting:
+      -- train predictors sequentially, each predictor trying to correct its predecessor
+
+- adaboost:
+      -- adaptive boosting
