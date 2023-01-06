@@ -64,3 +64,23 @@
 
 - adaboost:
       -- adaptive boosting
+      -- predictors are stumps by default (weak learner)
+      -- each predictor has a different weight associated with their vote
+            --- contradictory to random forest, where each predictor has same weight
+      -- more the accuracy of predictor -> higher the weight to its vote
+            --- for 0.5 accuracy -> 0 weight
+            --- for less than 0.5 accuracy -> negative weight
+      -- for the next predictor, sample weight of incorrectly classified instance is increases
+         and sample weight of correctly classified instances is decreased. total sample weight again
+         adds up to 1 (after normalizing)
+      -- the new predictor now gives more emphasis on instances with high sample weights
+      -- at last, the class with highest sum of predictor weights is the answer
+
+- a decision tree with just one node and two leaves is called a stump
+
+- gradient boosting:
+      -- it starts by creating a single leaf
+            -- with average value of target (regression)
+      -- like adaboost gradient boost builds fixed sized trees (8-32 leaves)
+      -- each tree tries to improve previous trees error
+      -- 
