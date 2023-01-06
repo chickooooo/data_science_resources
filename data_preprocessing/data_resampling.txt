@@ -1,0 +1,21 @@
+imbalance dataset:
+    - dataset with high difference in class distribution
+    - e.g: 100 instances of class A and 900 instances of class B
+
+randomly resample the dataset:
+    - undersampling: delete instances of majority class
+    - oversampling: duplicate instances of minority class
+
+random oversampling:
+    - randomly duplicating instances from minority class and
+      adding them to the training dataset
+    - these instances are added with replacement
+    - this might result in algorithm overfitting the dataset
+
+random undersampling:
+    - randomly selecting instances from majority class and
+      deleting them from the training dataset
+    - this might result in algorithm underfitting the dataset
+      as there is loss of information
+    - this technique is suitable for sufficiently large datasets
+      having large number of instances from majority class
