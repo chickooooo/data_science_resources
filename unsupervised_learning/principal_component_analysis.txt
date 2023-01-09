@@ -1,0 +1,30 @@
+PCA:
+    - principal component analysis (PCA)
+    - it finds the hyperplane that lies closest to the data and
+      then it projects the data onto it
+    - it selects the hyperplane (axis) that preserves maximum variance (less loss of information)
+    - the i-th axis is called the i-th pricipal component of the data
+    - the principal components are found using the Singular Value Decomposition technique (SVD)
+    - PCA assumes that the data is centered around origin
+
+- 1D hyperplane is a line
+- 2D hyperplane is a plane and so on
+
+
+reducing data dimensions:
+    - dimension of the data can be reduced down to d by
+      projecting the data on first d pricipal components
+    - this ensures maximum variance is preserved
+
+- explained_variance_ratio_ indicates the proprotion of dataset variance
+  that lies along each principal component
+
+
+choosing the right number of dimensions:
+    - around 95% of the dataset variance should be preserved
+    - for data visualisation, reduce dimensions down to 2 or 3
+    - variance preserved vs dimensions plot can also be used to see the tradeoff
+
+
+- reconstruction error: the mean squared distance between the original data and reconstructed data
+- incremental PCA (IPCA) can also be used on large datasets that cannot fit in memory

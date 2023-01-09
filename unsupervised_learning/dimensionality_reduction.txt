@@ -1,0 +1,28 @@
+curse of dimensionality:
+    - having too many features slows down the training
+    - also it is much harder to find a good solution
+
+dimensionality reduction helps in:
+    - speeding up the training
+    - improving accuracy in some cases, by removing noice
+    - data visualisation
+
+- the more dimensions the training set has, the more the risk of overfitting it
+
+main approaches for dimensionality reduction:
+    - projection
+    - manifold learning
+
+projection:
+    - projecting instances of a high-dimensional space to a much lower-dimensional subspace
+    - mostly projecting instances to a 2D plane
+
+manifold learning:
+    - modeling the manifold on which the training instances lie.
+    - a 2D manifold is a 2D shape, that can be bend or twisted in a higher dimensional space
+    - e.g swiss roll toy data
+
+techniques for dimensionality reduction:
+    - PCA
+    - kernel PCA
+    - LLE
