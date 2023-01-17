@@ -1,0 +1,41 @@
+- used for both classification and regression, but preferred for classification
+- can also be used for multi-class classification
+
+- 'k' is a hyperparameter
+- new datapoint will look at k (e.g. 5) nearest points and
+  its value will be the mode of those points (in classification)
+- in case of regression, the value of new datapoint will be
+  average of k nearest points
+
+- nearest points are found by calculating euclidean distance
+
+- KNN stores all the available data and classifies new datapoint based on similarity
+
+- KNN is a non-parametric algorithm which means it does not make any assumptions
+  on underlying data
+
+- KNN is also called a lazy learner algorithm because it does not learns from training
+  set immediately instead it stores the dataset and performs action at the time of prediction
+
+- As KNN heavily relies on memory to store all the data points, it is also called
+  instance based or memory base learning algorithm
+
+- KNN works on similarity measure, hence can be used for image classification
+
+- selecting value of k:
+    -- if value of k is very small, it leads to overfitting
+    -- if value of k is very large, it leads to underfitting
+
+- advantages of kNN:
+    -- simple to implement
+    -- adapts to new data easily
+    -- few hyperparameter (k, distance_metric)
+
+- limitations of KNN:
+    -- not efficient with huge datasets (lot of distance needs to be calculated)
+    -- computationally expensive for huge datasets
+
+- applications in machine learning:
+    -- recommendation systems
+    -- pattern recognition
+    -- missing value imputation
