@@ -27,6 +27,7 @@
 
 - rebase:
     -  git rebase branch_name          (merge given branch with current branch linearly)
+    -  git rebase b1 b2                (rebase on b1, b2)  -- b1 -> b2
 
     -- 2nd way of combining branches
     -- used to make a linear sequence of commits
@@ -34,3 +35,76 @@
     -- cleaner commit history
     -- if one of the parent is ancestor of another,
        then the ancestor parent will simply move to the latest parent
+
+- head:
+    -  git checkout commit_name        (add HEAD to commit with given name)
+
+    -- last commit
+    -- commit we are working on top of
+    -- detaching HEAD, means attaching it to a commit instead of a branch
+
+
+- relative references:
+    -  git checkout main^              (add HEAD to parent commit of main)
+    -  git checkout HEAD^^             (add HEAD to grandparent commit of HEAD)
+    -  git checkout HEAD~4             (add HEAD to 4th ancestor commit of HEAD)
+
+    -- starting with a known commit and then moving from there
+    -- move 1 ancestor up with ^
+    -- move n ancestors up with ~n
+
+
+- branch forcing:
+    -  git branch -f branch_name head_location/commit_hash           (reassign given brach to given location)
+
+    -- reassigning a branch to a specific commit
+
+
+- reversing changes:
+    -  git reset head_location                   (moves current branch to given location)
+    -  git revert head_location                  (creates new commit by reversing changes of commit at given location)
+
+    -- git reset moves the current branch to previous commit
+    -- git reset doesn't work for remote branches
+    -- git revert creates new commit by reversing changes of given commit
+
+
+- cherry pick:
+    -  git cherry-pick C1 C2 C3                   (copy commits C1, C2, C3 below current location)
+
+    -- copying series of commit below current location
+
+
+- interactive rebase:
+    -  git rebase -i location          (interactively rebase commits after given location to HEAD)
+
+    -- rebase commits interactively
+
+
+- tags:
+    -  git tag tag_name head_location/commit_hash          (add tag with tag_name to given commit)
+
+    -- add a permanent anchor to a commit
+
+
+- describe:
+    -  git describe <ref>              (<ref> is anything git can resolve into a commit)
+
+    -- describes given commit's distance from closest tag
+    -- output: <tag>_<numCommits>_g<hash>
+    -- hash is given commit's hash
+
+
+- specifying parent:
+    -  git checkout HEAD^2             (checkout to 2nd parent)
+
+    -- checkout to ntn parent if a commit has multiple parents
+    -- parents are ordered by their creation
+
+
+- chaining relative references together:
+    -  git HEAD~
+    -  git HEAD^2
+    -  git HEAD~2
+
+    -  git HEAD~^2~2
