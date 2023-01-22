@@ -1,0 +1,36 @@
+- commit:
+    -  git commit -m "message"         (take current snapshot)
+
+    -- takes snapshot of directory
+    -- only looks at changes made to the directory instead of copying whole directory
+    -- each commit is dependent on it's ancestor commit
+    -- very lightweight and fast to switch between
+
+
+- branches:
+    -  git branch branch_name          (create new branch)
+    -  git checkout branch_name        (move pointer to given branch)
+    -  git checkout -b branch_name     (creat new branch and move pointer to it)
+
+    -- incredibly lightweight
+    -- pointers to a specific commit
+
+
+- merging branches:
+    -  git merge branch_name           (merge given branch with current branch (branch with pointer))
+
+    -- 1st way of combining branches
+    -- a special commit with 2 unique parents
+    -- if one of the parent is ancestor of another,
+       then the ancestor parent will simply move to the latest parent
+
+
+- rebase:
+    -  git rebase branch_name          (merge given branch with current branch linearly)
+
+    -- 2nd way of combining branches
+    -- used to make a linear sequence of commits
+    -- takes a sequence of commits, copies them and plops them down somewhere else
+    -- cleaner commit history
+    -- if one of the parent is ancestor of another,
+       then the ancestor parent will simply move to the latest parent

@@ -1,0 +1,6 @@
+- contains 2 algorithms
+    -- Gaussian Naive Bayes Classifier
+    -- Multinomial Naive Bayes Classifier
+
+- probability of discrete variables is also called as likelihood
+- the initial guess of probability is called a prior probability
