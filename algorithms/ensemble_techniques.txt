@@ -1,0 +1,68 @@
+- max voting:
+   -- also called as hard voting
+   -- generally used for classification problems
+   -- prediction is made using n models
+   -- the prediction with maximum occurance (mode) is given as output
+
+
+- soft voting:
+   -- generally used for classification problems
+   -- prediction probability is generated using n models
+   -- the class with highest average prediction probability is given as output
+   -- generally performs better than hard voting
+
+
+- averaging:
+   -- generally used for regression problems
+   -- prediction is made using n models
+   -- average of all the predictions (mean) is given as output
+
+
+- weighted averaging:
+   -- extension of averaging method
+   -- prediction is made using n models
+   -- weights are assigned to each models prediction
+   -- weighted average of the predictions is given as output
+
+
+
+
+- stacking:
+    -- it consists of two layers of estimators
+    -- first layer consists of all baseline models
+    -- second layer consists of meta-classifier or meta-regressor
+       which take predictions from baseline models as input feature
+       and generate a new output
+    -- it works on the principle that different models capture different trends
+       in the data, by combining these models we can achieve better accuracy
+    -- example:
+        --- base models: linear regressor, SVR, DT, KNN
+        --- meta regressor: linear regressor
+
+
+- blending:
+    -- it is a subtype of stacking
+    -- has same architecture as stacking
+    -- the only difference is how the meta-estimator is trained
+
+
+- stacking vs blending:
+   -- in stacking k-fold cross validation is performed
+   -- in blending no cross validation is performed
+
+   -- in stacking predictions from each holdout set for k fold
+      is combined and feed as training data for meta-estimator
+   -- in blending as there is no cross validation, predictions from single
+      houldout set is feed as training data for meta-estimator
+
+
+- bagging:
+   -- it is a superset of soft voting and hard voting
+   -- the n estimators are in parallel
+   -- output is decided depending upon soft or hard voting
+
+
+- boosting:
+   -- the n estimators are in series
+   -- each successive estimator learns from previous estimator's errors
+   -- each successive estimator tries to improve previous estimator's weaknesses
